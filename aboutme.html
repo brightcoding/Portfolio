@@ -4,38 +4,24 @@
     <title>Girls Who Code Summer Immersion Program Portfolio </title>
   <!--this is a comment-->
     <script> 
-      <div class="tab">
-  <button class="tablinks" onclick="openTab(event, 'Home')">Home</button>
-  <button class="tablinks" onclick="openTab(event, 'Profile')">Profile</button>
-  <button class="tablinks" onclick="openTab(event, 'Projects')">Projects</button>
-  <button class="tablinks" onclick="openTab(event, 'Curriculum')">Curriculum</button> 
-  <button class="tablinks" onclick="openTab(event, 'Contact')">Contact</button>      
-</div>
-
-<div id="Home" class="tabcontent">
-  <h3>Home</h3>
-  <p>This is the center.</p>
-</div>
-
-<div id="Contact" class="tabcontent">
-  <h3>Contact</h3>
-  <p>This is where to discover my contact.</p> 
-</div>
-
-<div id="Profile" class="tabcontent">
-  <h3>Profile</h3>
-  <p>This is where you go to learn about me.</p>
-</div> 
-      
-<div id="Projects" class="tabcontent">
-  <h3>Projects</h3>
-  <p>This is where my summer projects are.</p>
-</div>
-      
-<div id="Curriculum" class="tabcontent">
-  <h3>Curriculum</h3>
-  <p>This is what I learned this summer.</p>
-</div>
+ /*Put the code Mamai had for tabs here*/ 
+      function openTab(evt, cityName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
     </script> 
       
   <style>
@@ -95,3 +81,6 @@
       <a href="https://github.com/brightcoding/Portfolio/blob/gh-pages/obamicon.py title="Go to Obamicon" </a>
     </body>
     </html>
+   
+                                                                                                         
+                                                                                                         
