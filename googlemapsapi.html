@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    <h3>Organizations Near Me</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var nmaahc = {lat: 38.891239, lng: -77.030198};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 6,
+          center: nmaahc
+        });
+                  var contentString = '<div id="content">'+
+                      '<div id="siteNotice">'+
+                      '</div>'+
+                      '<h1 id="firstHeading" class="firstHeading"> "Department of Energy and Environment"</h1>'+
+                      '<div id="bodyContent">'+
+                      '<p><b> Department of Energy and Environment </b>'+
+                      '<p>Address: 1200 First St NE, Washington, DC 20002 </p>'+
+                      '<p><a href="https://doee.dc.gov/">'+
+                      'https://doee.dc.gov</a>'+
+                      'Phone:(302)564-1423</p>'+
+                      '</div>'+
+                      '</div>';
+                  var infowindow = new google.maps.InfoWindow({
+                    content: contentString
+                  });
+                  var marker = new google.maps.Marker({
+                    position:{lat:38.8911,lng:-77.0327},
+                    map: map,
+                  });
+                  marker.addListener('click', function() {
+                    infowindow.open(map, marker);
+                  });
+                  //bfdbvaijcbbbyfibv//
+                  var contentString1 = '<div id="content">'+
+                      '<div id="siteNotice">'+
+                      '</div>'+
+                      '<h1 id="firstHeading" class="firstHeading"> "DC Environmental Network"</h1>'+
+                      '<div id="bodyContent">'+
+                      '<p><b> Non-profit organization in Washington, D.C., United States of America </b>'+
+                      '<p>Address: 322 4th St NE, Washington, DC 20002</p>'+
+                      '<p><a href="http://www.dcen.net/">'+
+                      'http://www.dcen.net/</a>'+
+                      'Phone:(202) 380-3440</p>'+
+                      '</div>'+
+                      '</div>';
+                  var infowindow1 = new google.maps.InfoWindow({
+                    content: contentString1
+                  });
+                  var marker1 = new google.maps.Marker({
+                    position:{lat:38.8946, lng:-77.0008},
+                    map:map,
+                  });
+                  marker1.addListener('click', function() {
+                    infowindow1.open(map, marker1);
+                  });
+
+                var contentString2 = '<div id="content">'+
+                    '<div id="siteNotice">'+
+                    '</div>'+
+                    '<h1 id="firstHeading" class="firstHeading"> "DC Environmental Network"</h1>'+
+                    '<div id="bodyContent">'+
+                    '<p><b> Non-profit organization in Washington, D.C., United States of America </b>'+
+                    '<p>Address: 322 4th St NE, Washington, DC 20002</p>'+
+                    '<p><a href="http://www.dcen.net/">'+
+                    'http://www.dcen.net/</a>'+
+                    'Phone:(202) 380-3440</p>'+
+                    '</div>'+
+                    '</div>';
+                var infowindow2 = new google.maps.InfoWindow({
+                  content: contentString1
+                });
+                var marker2 = new google.maps.Marker({
+                  position:{lat:38.8857, lng:-76.9977},
+                  map:map,
+                });
+                marker2.addListener('click', function() {
+                  infowindow2.open(map, marker2);
+                });
+
+
+
+
+
+
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiftmWOICMRzVtIqN9j-AbDrZz7LpBIlw&callback=initMap">
+    </script>
+  </body>
+</html>
